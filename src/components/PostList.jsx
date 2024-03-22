@@ -2,6 +2,11 @@ import React from 'react';
 import PostItem from './PostItem';
 
 const PostList = ({posts, title, deletePost}) => {
+    if(!posts.length) {
+        return(
+        <p>posts not found</p>
+        );
+    }
 
     return (
         <div>
